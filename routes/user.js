@@ -1,6 +1,7 @@
 'use strict'
 
 const express = require('express')
+
 const router = express.Router();
 
 router.get('/:id', (req, res) => res.json({
@@ -9,7 +10,7 @@ router.get('/:id', (req, res) => res.json({
 }))
 
 router.get('/', (req, res) => res.json([
-    {"id": 1, "email": "fake@email.com"}
+    { "id": 1, "email": "fake@email.com" }
 ]))
 
 module.exports = router;
