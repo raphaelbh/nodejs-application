@@ -5,9 +5,11 @@ const express = require('express')
 const { PORT = '3000' } = process.env
 const app = express()
 
-app.use((req, res, next) => {
-  res.send('Hello World!');
-})
+const index = require("./routes/index.js");
+const user = require("./routes/user.js");
+
+app.use("/", index);
+app.use("/users", user);
 
 app.listen(PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}`);
